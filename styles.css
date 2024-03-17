@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    padding-top: 10%;
 }
 
 #word-container {
@@ -8,7 +9,7 @@ body {
 }
 
 #word {
-    font-size: 24px;
+    font-size: 54px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -26,6 +27,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: medium;
 }
 
 #unknown-btn{
@@ -36,8 +38,16 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: medium;
 }
 
 #correct-btn:hover {
     background-color: #45a049;
+}
+
+#unknown-words{
+    margin-top: 20px;
+    font-size: 25px;
+    line-height: 210%;
+    color: #2f2f2f;
 }
