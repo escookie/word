@@ -28,6 +28,16 @@ body {
     cursor: pointer;
 }
 
+#unknown-btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #9e9e9e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 #correct-btn:hover {
     background-color: #45a049;
 }

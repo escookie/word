@@ -21,14 +21,28 @@ let currentIndex = 0;
 const wordElement = document.getElementById("word");
 const meaningElement = document.getElementById("meaning");
 const correctButton = document.getElementById("correct-btn");
+const unknownButton = document.getElementById("unknown-btn");
+const unknownWordsContainer = document.getElementById("unknown-words");
 
 // 초기 단어 설정
 updateWord();
 
 // "맞았다!" 버튼에 클릭 이벤트 추가
 correctButton.addEventListener("click", () => {
-    // 정답 처리
-    
+    // 다음 단어로 넘어감
+    currentIndex++;
+    // 마지막 단어일 경우 다시 처음으로 돌아감
+    if (currentIndex === words.length) {
+        currentIndex = 0;
+    }
+    // 단어 업데이트
+    updateWord();
+});
+
+// "모르겠다" 버튼에 클릭 이벤트 추가
+unknownButton.addEventListener("click", () => {
+    // 모르겠다고 표시된 단어를 보여줌
+    showUnknownWord();
     // 다음 단어로 넘어감
     currentIndex++;
     // 마지막 단어일 경우 다시 처음으로 돌아감
@@ -55,4 +69,12 @@ function showMeaning() {
     meaningElement.style.display = "block";
     // 단어 클릭 이벤트 제거
     wordElement.removeEventListener("click", showMeaning);
+}
+
+// 모르겠다고 표시된 단어를 보여주는 함수
+function showUnknownWord() {
+    const currentWord = words[currentIndex];
+    const unknownWordElement = document.createElement("div");
+    unknownWordElement.textContent = `${currentWord.word}: ${currentWord.meaning}`;
+    unknownWordsContainer.appendChild(unknownWordElement);
 }
