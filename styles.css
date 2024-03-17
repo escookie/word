@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#word-container {
+    margin-top: 50px;
+}
+
+#word {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#meaning {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#correct-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#correct-btn:hover {
+    background-color: #45a049;
+}
