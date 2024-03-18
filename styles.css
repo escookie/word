@@ -50,3 +50,13 @@ body {
     line-height: 210%;
     color: #2f2f2f;
 }
+
+.test-container {
+    padding: 2%;
+    text-align: center;
+}
+
+#canvas {
+    border: 1px solid;
+    background-color: white;
+}
